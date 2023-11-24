@@ -8,10 +8,17 @@ class ListViewProvider with ChangeNotifier{
 
 
   void add(){
-
   _numbers.add(_numbers.last+1);
   notifyListeners();
   }
+
+  void minus(){
+
+    _numbers.remove(_numbers.last);
+    notifyListeners();
+  }
+
+
 
 
 

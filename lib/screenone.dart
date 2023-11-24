@@ -20,14 +20,31 @@ class _ScreenOneState extends State<ScreenOne> {
      builder: (context,listViewProvider,child){
 
        return  Scaffold(
-         floatingActionButton: FloatingActionButton(
-           onPressed: (){
+         floatingActionButton: Row(
+           mainAxisAlignment: MainAxisAlignment.end,
+           children: [
+             FloatingActionButton(
+               onPressed: (){
 
 
-             listViewProvider.add();
+                 // listViewProvider.minus();
 
-           },
-           child: Icon(Icons.add),
+
+
+               },
+               child: Icon(Icons.minimize),
+             ),
+             SizedBox(width: 10,),
+             FloatingActionButton(
+               onPressed: (){
+
+
+                 listViewProvider.add();
+
+               },
+               child: Icon(Icons.add),
+             ),
+           ],
          ),
          appBar: AppBar(
 
